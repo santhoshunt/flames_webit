@@ -1,6 +1,10 @@
 function getNames() {
 	let boyname = document.getElementById("boy-name").value;
 	let girlname = document.getElementById("girl-name").value;
+	if (boyname.trim().length === 0 || girlname.trim().length === 0) {
+		alert("Please enter two names");
+		return;
+	}
 	for (let i = 0; i < boyname.length; i++) {
 		for (let j = 0; j < girlname.length; j++) {
 			if (boyname[i] === girlname[j] && boyname[j] != "*") {
